@@ -214,8 +214,8 @@ export default function Home() {
                 </div>
               </div>
               <blockquote className="text-lg text-gray-700 mb-6 leading-relaxed flex-grow">
-                "Excelente calidad y servicio. Los productos personalizados superaron nuestras expectativas. 
-                NotiPromo entendió perfectamente nuestra visión de marca."
+                &ldquo;Excelente calidad y servicio. Los productos personalizados superaron nuestras expectativas. 
+                NotiPromo entendió perfectamente nuestra visión de marca.&rdquo;
               </blockquote>
               <div className="flex items-center mt-auto">
                 <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
@@ -236,8 +236,8 @@ export default function Home() {
                 </div>
               </div>
               <blockquote className="text-lg text-gray-700 mb-6 leading-relaxed flex-grow">
-                "NotiPromo nos ayudó a crear productos únicos que reflejan perfectamente nuestra marca. 
-                El proceso fue fluido y los resultados excepcionales."
+                &ldquo;NotiPromo nos ayudó a crear productos únicos que reflejan perfectamente nuestra marca. 
+                El proceso fue fluido y los resultados excepcionales.&rdquo;
               </blockquote>
               <div className="flex items-center mt-auto">
                 <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
@@ -258,8 +258,8 @@ export default function Home() {
                 </div>
               </div>
               <blockquote className="text-lg text-gray-700 mb-6 leading-relaxed flex-grow">
-                "Entrega rápida y productos de alta calidad. El equipo de NotiPromo es profesional 
-                y creativo. Definitivamente los recomendamos."
+                &ldquo;Entrega rápida y productos de alta calidad. El equipo de NotiPromo es profesional 
+                y creativo. Definitivamente los recomendamos.&rdquo;
               </blockquote>
               <div className="flex items-center mt-auto">
                 <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
