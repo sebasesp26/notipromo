@@ -6,6 +6,13 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { CheckCircle, Clock, Package, Palette, Settings } from 'lucide-react'
 
+// Generar rutas estáticas para todos los productos
+export async function generateStaticParams() {
+  return productos.map((producto) => ({
+    id: producto.id,
+  }))
+}
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function generateMetadata({ params }: any) {
   const producto = getProductoById(params.id)
@@ -13,12 +20,18 @@ export async function generateMetadata({ params }: any) {
   if (!producto) {
     return {
       title: 'Producto no encontrado - NotiPromo',
+      description: 'El producto solicitado no fue encontrado.',
     }
   }
 
   return {
     title: `${producto.nombre} - NotiPromo`,
     description: producto.descripcion,
+    openGraph: {
+      title: `${producto.nombre} - NotiPromo`,
+      description: producto.descripcion,
+      images: [producto.imagen],
+    },
   }
 }
 
