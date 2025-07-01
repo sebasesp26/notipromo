@@ -1,26 +1,68 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lato:wght@300;400;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        font-family: 'Inter', system-ui, sans-serif;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Lato', system-ui, sans-serif;
+    }
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@layer components {
+    .btn-primary {
+        @apply bg-primary-600 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 transform;
+    }
+    .btn-primary:hover {
+        @apply bg-primary-700 scale-105;
+    }
+    .btn-primary:focus {
+        @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+    }
+    .btn-secondary {
+        @apply bg-white text-primary-600 border-2 border-primary-600 font-medium py-3 px-6 rounded-lg transition-all duration-200 transform;
+    }
+    .btn-secondary:hover {
+        @apply bg-gray-50 scale-105;
+    }
+    .btn-secondary:focus {
+        @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+    }
+    .card {
+        @apply bg-white rounded-xl shadow-lg transition-all duration-300 transform;
+    }
+    .card:hover {
+        @apply shadow-xl -translate-y-1;
+    }
+    .input-field {
+        @apply w-full px-4 py-3 border border-gray-300 rounded-lg transition-all duration-200;
+    }
+    .input-field:focus {
+        @apply ring-2 ring-primary-500 border-transparent;
+    }
+    .section-padding {
+        @apply py-16 px-4;
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@media (min-width: 640px) {
+    .section-padding {
+        @apply px-6;
+    }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (min-width: 1024px) {
+    .section-padding {
+        @apply px-8;
+    }
 }
